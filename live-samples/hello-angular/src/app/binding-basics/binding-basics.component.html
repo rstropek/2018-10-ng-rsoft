@@ -1,0 +1,28 @@
+<h1>Hello Angular!</h1>
+
+<p>{{ title + '!!!' }}</p>
+<p>{{ getTitle() }}</p>
+
+<button type="button"
+    (click)="addSomethingToTitle()">
+    Add !
+</button>
+
+<p [hidden]="!is007()">
+    Hello 007!
+</p>
+
+<p *ngIf="is007()">
+    Hello 007!
+</p>
+
+<ul>
+    <li *ngFor="let item of todos; even as isEven; index as i"
+        [class.line-finder]="isEven">
+        {{ i + 1 }}: {{ item }}
+        <button type="button" (click)="deleteItem(i)">X</button>
+    </li>
+</ul>
+
+<input type="text" [(ngModel)]="newTodoItem" />
+<button type="button" (click)="addTodo()">Add ToDo</button>
