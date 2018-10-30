@@ -1,0 +1,24 @@
+<form [formGroup]="customerFormGroup">
+  <div>
+    <label>First Name:</label>
+    <input type="text" placeholder="Enter first name here..." 
+      name="firstNameInput" formControlName="firstName" />
+  </div>
+  <div style="color: red" *ngIf="customerFormGroup.controls.firstName.errors?.required">
+    Das Feld muss einen Wert enthalten!
+  </div>
+  <div style="color: red" *ngIf="customerFormGroup.controls.firstName.errors?.minlength">
+    Die Eingabe ist zu kurz!
+  </div>
+  <div>
+    <label>Last Name:</label>
+    <input type="text" placeholder="Enter last name here..." 
+      name="lastNameInput" formControlName="lastName" />
+  </div>
+  <div>
+    <label>Age:</label>
+    <input type="number" placeholder="Enter age here..." 
+      name="ageInput" formControlName="age" />
+  </div>
+  <button (click)="onSave()" [disabled]="customerFormGroup.invalid">Save</button>
+</form>

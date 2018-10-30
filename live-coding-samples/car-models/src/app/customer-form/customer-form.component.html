@@ -1,0 +1,24 @@
+<form>
+  <div>
+    <label>First Name:</label>
+    <input type="text" placeholder="Enter first name here..." 
+      name="firstNameInput" [(ngModel)]="customer.firstName"
+      required minlength="5" #firstName="ngModel" />
+  </div>
+  <div style="color: red" *ngIf="firstName.errors?.required">
+    Das Feld muss einen Wert enthalten!
+  </div>
+  <div style="color: red" *ngIf="firstName.errors?.minlength">
+    Die Eingabe ist zu kurz!
+  </div>
+  <div>
+    <label>Last Name:</label>
+    <input type="text" placeholder="Enter last name here..." 
+      name="lastNameInput" [(ngModel)]="customer.lastName" />
+  </div>
+  <div>
+    <label>Age:</label>
+    <input type="number" placeholder="Enter age here..." 
+      name="ageInput" [(ngModel)]="customer.age" />
+  </div>
+</form>
