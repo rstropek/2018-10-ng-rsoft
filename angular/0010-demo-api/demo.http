@@ -13,8 +13,8 @@ POST {{host}}/todos
 Content-Type: application/json
 
 {
-  "description": "Shopping",
-  "assignedTo": "Eve"
+  "description": "Chill in front of TV",
+  "assignedTo": "Adam"
 }
 
 ###

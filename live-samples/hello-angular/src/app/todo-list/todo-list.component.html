@@ -4,6 +4,7 @@
       <th>Description</th>
       <th>Assigned To</th>
       <th>Done</th>
+      <th>Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,9 @@
       <td>{{ item.assignedTo }}</td>
       <td>
         <input type="checkbox" [checked]="item.done" />
+      </td>
+      <td>
+        <button type="button" class="btn btn-dark" (click)="delete(item.id)">Delete</button>
       </td>
     </tr>
   </tbody>

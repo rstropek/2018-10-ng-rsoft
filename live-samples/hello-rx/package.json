@@ -1,0 +1,19 @@
+{
+  "name": "hello-rx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch *.ts --exec \"ts-node app.ts\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.4"
+  },
+  "dependencies": {
+    "rxjs": "^6.3.3"
+  }
+}
