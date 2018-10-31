@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { BindingBasicsComponent } from './binding-basics/binding-basics.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { NgforMultipleElemsComponent } from './ngfor-multiple-elems/ngfor-multiple-elems.component';
+import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 const routes: Routes = [
   { path: 'binding-basics', component: BindingBasicsComponent },
   { path: 'todos', component: TodoListComponent },
   { path: 'multiple-elems', component: NgforMultipleElemsComponent },
+  { path: 'user-settings', component: UserSettingsComponent},
   { path: '', pathMatch: 'full', redirectTo: 'todos' }
 ];
 

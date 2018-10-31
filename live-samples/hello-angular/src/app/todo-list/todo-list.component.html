@@ -1,14 +1,18 @@
-<table>
-  <tr>
-    <th>Description</th>
-    <th>Assigned To</th>
-    <th>Done</th>
-  </tr>
-  <tr *ngFor="let item of todoList | async">
-    <td>{{ item.description }}</td>
-    <td>{{ item.assignedTo }}</td>
-    <td>
-      <input type="checkbox" [checked]="item.done" />
-    </td>
-  </tr>
+<table class="table">
+  <thead [class.thead-dark]="userSettings.useDark">
+    <tr>
+      <th>Description</th>
+      <th>Assigned To</th>
+      <th>Done</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of todoList | async">
+      <td>{{ item.description }}</td>
+      <td>{{ item.assignedTo }}</td>
+      <td>
+        <input type="checkbox" [checked]="item.done" />
+      </td>
+    </tr>
+  </tbody>
 </table>

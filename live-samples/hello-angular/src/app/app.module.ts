@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BindingBasicsComponent } from './binding-basics/binding-basics.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { NgforMultipleElemsComponent } from './ngfor-multiple-elems/ngfor-multiple-elems.component';
+import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindingBasicsComponent,
     TodoListComponent,
-    NgforMultipleElemsComponent
+    NgforMultipleElemsComponent,
+    UserSettingsComponent
   ],
   imports: [
     BrowserModule,

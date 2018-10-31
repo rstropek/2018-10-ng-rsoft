@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {TodoAccessLayerService} from '../todo-access-layer.service';
 import { TodoItem } from './todo-item';
 import { getCanActivateChild } from '@angular/router/src/utils/preactivation';
+import { UserSettingsService } from '../user-settings.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,7 +13,7 @@ import { getCanActivateChild } from '@angular/router/src/utils/preactivation';
 export class TodoListComponent implements OnInit {
   public todoList: Promise<TodoItem[]>;
 
-  constructor(public todoDal: TodoAccessLayerService) {}
+  constructor(public todoDal: TodoAccessLayerService, public userSettings: UserSettingsService) {}
 
   async ngOnInit() {
     // this.todoDal.loadTodoList(result => this.todoList = result);
