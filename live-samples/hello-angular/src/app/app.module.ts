@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,8 @@ import { BindingBasicsComponent } from './binding-basics/binding-basics.componen
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { NgforMultipleElemsComponent } from './ngfor-multiple-elems/ngfor-multiple-elems.component';
 import { UserSettingsComponent } from './user-settings/user-settings.component';
+import { NewTodoItemComponent } from './new-todo-item/new-todo-item.component';
+import { ReactiveNewTodoItemComponent } from './reactive-new-todo-item/reactive-new-todo-item.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
     BindingBasicsComponent,
     TodoListComponent,
     NgforMultipleElemsComponent,
-    UserSettingsComponent
+    UserSettingsComponent,
+    NewTodoItemComponent,
+    ReactiveNewTodoItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,10 @@ export class TodoAccessLayerService {
     return this.httpClient.delete<void>(`http://localhost:8080/api/todos/${todoItemId}`);
   }
 
+  public addTodoItem(todoItem: TodoItem): Observable<TodoItem> {
+    return this.httpClient.post<TodoItem>('http://localhost:8080/api/todos', todoItem);
+  }
+
   public loadTodoListPromise(): Promise<TodoItem[]> {
     return new Promise<TodoItem[]>((resolve, reject) => {
       // Simulate web api
