@@ -1,0 +1,8 @@
+<h2>Adding</h2>
+
+<div *ngFor="let number of numbers">
+    <app-adding [parameter1]="number" [parameter2]="number * 2"
+        (calculated)="onCalculationFinished($event)"></app-adding>
+</div>
+
+<button (click)="increment()">Increment</button>

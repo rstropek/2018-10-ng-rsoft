@@ -11,6 +11,8 @@ import { NgforMultipleElemsComponent } from './ngfor-multiple-elems/ngfor-multip
 import { UserSettingsComponent } from './user-settings/user-settings.component';
 import { NewTodoItemComponent } from './new-todo-item/new-todo-item.component';
 import { ReactiveNewTodoItemComponent } from './reactive-new-todo-item/reactive-new-todo-item.component';
+import { AddingComponent } from './adding/adding.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ReactiveNewTodoItemComponent } from './reactive-new-todo-item/reactive-
     NgforMultipleElemsComponent,
     UserSettingsComponent,
     NewTodoItemComponent,
-    ReactiveNewTodoItemComponent
+    ReactiveNewTodoItemComponent,
+    AddingComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,

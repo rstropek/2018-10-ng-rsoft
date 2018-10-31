@@ -6,6 +6,7 @@ import { NgforMultipleElemsComponent } from './ngfor-multiple-elems/ngfor-multip
 import { UserSettingsComponent } from './user-settings/user-settings.component';
 import { NewTodoItemComponent } from './new-todo-item/new-todo-item.component';
 import { ReactiveNewTodoItemComponent } from './reactive-new-todo-item/reactive-new-todo-item.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 const routes: Routes = [
   { path: 'binding-basics', component: BindingBasicsComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'user-settings', component: UserSettingsComponent },
   { path: 'new-todo-item', component: NewTodoItemComponent },
   { path: 'reactive-new-todo-item', component: ReactiveNewTodoItemComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'new-todo-item' }
+  { path: 'calculator', component: CalculatorComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'calculator' }
 ];
 
 @NgModule({
